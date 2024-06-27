@@ -1,8 +1,10 @@
 package org.example.hw;
 
+
 import java.util.*;
 
 public class Market implements MarketBehavior, QueueBehavior {
+
     List<Actor> actors = new LinkedList<>();
     Queue<Actor> actorsQueue = new ArrayDeque<>();
 
