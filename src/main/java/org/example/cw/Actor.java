@@ -1,11 +1,14 @@
 package org.example.cw;
 
-public abstract class Buyer implements buyerBehavior{
+public abstract class Actor implements ActorBehavior{
     protected String name;
-    protected boolean isMakeOrderClass;
-    protected boolean isTakeOrderClass;
+    protected boolean isMakeOrder;
+    protected boolean isTakeOrder;
 
-    abstract String getName();
+    public Actor(String name){
+        this.name = name;
+    }
 
+    public abstract String getName();
 
 }

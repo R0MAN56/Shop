@@ -1,29 +1,33 @@
 package org.example.cw;
 
-public class Human extends Buyer {
+public class Human extends Actor{
 
-    @Override
-    String getName() {
-        return name;
+    public Human(String name) {
+        super(name);
     }
 
     @Override
-    public void setMakeOrder() {
-        isMakeOrderClass = true;
+    public void setMakeOrder(boolean fag) {
+        this.isMakeOrder = fag;
     }
 
     @Override
-    public void setTakeOrder() {
-        isTakeOrderClass = true;
+    public void setTakeOrder(boolean fag) {
+        this.isTakeOrder = fag;
     }
 
     @Override
     public boolean isMakeOrder() {
-         return isMakeOrderClass;
+        return isMakeOrder;
     }
 
     @Override
     public boolean isTakeOrder() {
-        return isTakeOrderClass;
+        return isTakeOrder;
+    }
+
+    @Override
+    public String getName() {
+       return name;
     }
 }
