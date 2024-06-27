@@ -3,17 +3,17 @@ package org.example.hw;
 import java.util.*;
 
 public class Market implements MarketBehavior, QueueBehavior {
-    List<Buyer> actors = new LinkedList<>();
-    Queue<Buyer> actorsQueue = new ArrayDeque<>();
+    List<Actor> actors = new LinkedList<>();
+    Queue<Actor> actorsQueue = new ArrayDeque<>();
 
     @Override
-    public void acceptToMarket(Buyer actor) {
+    public void acceptToMarket(Actor actor) {
         System.out.println(actor.getName() + " зашел в магазин");
         actors.add(actor);
     }
 
     @Override
-    public void releaseFromMarket(Buyer actor) {
+    public void releaseFromMarket(Actor actor) {
         actors.remove(actor);
         System.out.println(actor.getName() + " покинул магазин");
     }
@@ -23,7 +23,7 @@ public class Market implements MarketBehavior, QueueBehavior {
     }
 
     @Override
-    public void takeInQueue(Buyer actor) {
+    public void takeInQueue(Actor actor) {
         actorsQueue.add(actor);
         System.out.println(actor.getName() + " встал в очередь");
     }
